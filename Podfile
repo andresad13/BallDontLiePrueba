@@ -5,6 +5,9 @@ target 'PruebaBallDontLie' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
+  pod 'Alamofire'
+  pod 'SwiftyJSON', '~> 4.0'
+  pod 'Toast-Swift', '~> 5.0.0'
   # Pods for PruebaBallDontLie
 
   target 'PruebaBallDontLieTests' do
