@@ -36,5 +36,26 @@ class Services {
                 }
         }
     }
+    func getPlayer(playerId: String,completionHandler: @escaping (Teams) -> ()) {
+         
+
+         AF.request("https://www.balldontlie.io/api/v1/players/\(playerId)", method:.get , parameters : nil ,encoding: JSONEncoding.default, headers: nil)
+             .responseJSON { response in
+                 DispatchQueue.main.async {}
+                 if let json = response.data {
+                     do{
+                         let data = try JSON(data: json)
+                         let str = data["team"]
+                    
+                             let team : Teams = Teams(city: str["city"].string!, conference: str["conference"].string!, division: str["division"].string!, name: str["full_name"].string!)
+                         
+                         completionHandler(team)
+                     }
+                     catch{
+                         print("JSON Error")
+                     }
+                 }
+         }
+     }
     
 }

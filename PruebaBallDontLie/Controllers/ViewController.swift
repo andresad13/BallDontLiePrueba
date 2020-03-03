@@ -12,6 +12,12 @@ import UIKit
 
 
 class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+    
+    struct DeclaredVar{
+        static var playerListGeneral : [player] = []
+    }
+        
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return playerList.count
     }
@@ -35,21 +41,36 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+           
+           
+           UserDefaults.standard.set(playerList[indexPath.row].id!, forKey: "selectedPlayer") //setObject
+           self.performSegue(withIdentifier: "ToEdit", sender: self)
+           
+           
+           
+           
+       }
+    
 
     var playerList : [player] = []
-    var playerListGeneral : [player] = []
+    
     @IBOutlet weak var playersColl: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        if(DeclaredVar.playerListGeneral.isEmpty){
         Services().getPlayers(){ (success) in
                          self.playerList = success
-                         self.playerListGeneral = success
+            DeclaredVar.playerListGeneral = success
             self.playersColl.reloadData()
                         
                }
-      
+        }else{
+            self.playerList = DeclaredVar.playerListGeneral
+             self.playersColl.reloadData()
+        }
     }
 
     @IBAction func filterPosition(_ sender: Any) {
@@ -76,13 +97,13 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         let textFind =  fieldFindText.text!
                playerList.removeAll()
-               for index in playerListGeneral{
+        for index in DeclaredVar.playerListGeneral{
                    if ((index.first_name!.contains(textFind)) || (index.last_name!.contains(textFind))){
                        playerList.append(index)
                    }
                }
                if(textFind == "")  {
-                   playerList = playerListGeneral
+                playerList = DeclaredVar.playerListGeneral
                }
                self.playersColl.reloadData()
     }
@@ -90,14 +111,18 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     func filterPos(pos : String )
     {
         playerList.removeAll()
-                      for index in playerListGeneral{
+        for index in DeclaredVar.playerListGeneral{
                           if ((index.position!.contains(pos))){
                               playerList.append(index)
                           }
                       }
-                      
                       self.playersColl.reloadData()
-        
+    }
+    
+    @IBAction func toNewPlayer(_ sender: Any) {
+        UserDefaults.standard.set("", forKey: "selectedPlayer")
+        self.performSegue(withIdentifier: "toEditPlayer", sender: self)
+
     }
 }
 

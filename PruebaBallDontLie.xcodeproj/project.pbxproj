@@ -20,6 +20,9 @@
 		9A35D076240ECDC8006BBA6A /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A35D075240ECDC8006BBA6A /* Services.swift */; };
 		9A35D078240ECE1C006BBA6A /* Players.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A35D077240ECE1C006BBA6A /* Players.swift */; };
 		9A35D07C240EE3A0006BBA6A /* PlayerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A35D07B240EE3A0006BBA6A /* PlayerViewCell.swift */; };
+		9A35D07E240EF8CE006BBA6A /* NewUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A35D07D240EF8CE006BBA6A /* NewUserViewController.swift */; };
+		9A35D080240F001B006BBA6A /* Teams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A35D07F240F001B006BBA6A /* Teams.swift */; };
+		9A35D082240F01E2006BBA6A /* DetailPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A35D081240F01E2006BBA6A /* DetailPlayerViewController.swift */; };
 		AEBAB2888F60552C78CF3E64 /* Pods_PruebaBallDontLie_PruebaBallDontLieUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7548424D842030D95BB0B3FB /* Pods_PruebaBallDontLie_PruebaBallDontLieUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +67,9 @@
 		9A35D075240ECDC8006BBA6A /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
 		9A35D077240ECE1C006BBA6A /* Players.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Players.swift; sourceTree = "<group>"; };
 		9A35D07B240EE3A0006BBA6A /* PlayerViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewCell.swift; sourceTree = "<group>"; };
+		9A35D07D240EF8CE006BBA6A /* NewUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserViewController.swift; sourceTree = "<group>"; };
+		9A35D07F240F001B006BBA6A /* Teams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Teams.swift; sourceTree = "<group>"; };
+		9A35D081240F01E2006BBA6A /* DetailPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPlayerViewController.swift; sourceTree = "<group>"; };
 		EFB499CD7854C7FA94A1D048 /* Pods-PruebaBallDontLieTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PruebaBallDontLieTests.debug.xcconfig"; path = "Target Support Files/Pods-PruebaBallDontLieTests/Pods-PruebaBallDontLieTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EFD561431F118A316335C890 /* Pods_PruebaBallDontLieTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PruebaBallDontLieTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE5D8E9B3D858F400F54DE29 /* Pods-PruebaBallDontLieTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PruebaBallDontLieTests.release.xcconfig"; path = "Target Support Files/Pods-PruebaBallDontLieTests/Pods-PruebaBallDontLieTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -179,6 +185,8 @@
 			children = (
 				9A35D045240EB9F0006BBA6A /* ViewController.swift */,
 				9A35D07B240EE3A0006BBA6A /* PlayerViewCell.swift */,
+				9A35D07D240EF8CE006BBA6A /* NewUserViewController.swift */,
+				9A35D081240F01E2006BBA6A /* DetailPlayerViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -187,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				9A35D077240ECE1C006BBA6A /* Players.swift */,
+				9A35D07F240F001B006BBA6A /* Teams.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -440,12 +449,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A35D080240F001B006BBA6A /* Teams.swift in Sources */,
 				9A35D046240EB9F0006BBA6A /* ViewController.swift in Sources */,
+				9A35D082240F01E2006BBA6A /* DetailPlayerViewController.swift in Sources */,
 				9A35D07C240EE3A0006BBA6A /* PlayerViewCell.swift in Sources */,
 				9A35D078240ECE1C006BBA6A /* Players.swift in Sources */,
 				9A35D076240ECDC8006BBA6A /* Services.swift in Sources */,
 				9A35D042240EB9F0006BBA6A /* AppDelegate.swift in Sources */,
 				9A35D044240EB9F0006BBA6A /* SceneDelegate.swift in Sources */,
+				9A35D07E240EF8CE006BBA6A /* NewUserViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
