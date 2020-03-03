@@ -1,0 +1,6 @@
+framework module Pods_PruebaBallDontLie_PruebaBallDontLieUITests {
+  umbrella header "Pods-PruebaBallDontLie-PruebaBallDontLieUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
