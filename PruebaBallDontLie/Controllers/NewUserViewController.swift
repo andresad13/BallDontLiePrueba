@@ -42,6 +42,7 @@ class NewUserViewController: UIViewController {
     }
     @IBAction func SavePlayer(_ sender: Any) {
         
+        
         if(UserDefaults.standard.string(forKey: "selectedPlayer")! != ""){
             if let i = ViewController.DeclaredVar.playerListGeneral.firstIndex(where: { $0.id == Int(UserDefaults.standard.string(forKey: "selectedPlayer")!) }) {
                 ViewController.DeclaredVar.playerListGeneral[i].first_name! = self.nameField.text!
