@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,6 +17,12 @@
 		9A35D04E240EB9F5006BBA6A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A35D04C240EB9F5006BBA6A /* LaunchScreen.storyboard */; };
 		9A35D059240EB9F5006BBA6A /* PruebaBallDontLieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A35D058240EB9F5006BBA6A /* PruebaBallDontLieTests.swift */; };
 		9A35D064240EB9F5006BBA6A /* PruebaBallDontLieUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A35D063240EB9F5006BBA6A /* PruebaBallDontLieUITests.swift */; };
+		9A35D076240ECDC8006BBA6A /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A35D075240ECDC8006BBA6A /* Services.swift */; };
+		9A35D078240ECE1C006BBA6A /* Players.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A35D077240ECE1C006BBA6A /* Players.swift */; };
+		9A35D07C240EE3A0006BBA6A /* PlayerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A35D07B240EE3A0006BBA6A /* PlayerViewCell.swift */; };
+		9A35D07E240EF8CE006BBA6A /* NewUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A35D07D240EF8CE006BBA6A /* NewUserViewController.swift */; };
+		9A35D080240F001B006BBA6A /* Teams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A35D07F240F001B006BBA6A /* Teams.swift */; };
+		9A35D082240F01E2006BBA6A /* DetailPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A35D081240F01E2006BBA6A /* DetailPlayerViewController.swift */; };
 		AEBAB2888F60552C78CF3E64 /* Pods_PruebaBallDontLie_PruebaBallDontLieUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7548424D842030D95BB0B3FB /* Pods_PruebaBallDontLie_PruebaBallDontLieUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +64,12 @@
 		9A35D05F240EB9F5006BBA6A /* PruebaBallDontLieUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PruebaBallDontLieUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A35D063240EB9F5006BBA6A /* PruebaBallDontLieUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PruebaBallDontLieUITests.swift; sourceTree = "<group>"; };
 		9A35D065240EB9F5006BBA6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A35D075240ECDC8006BBA6A /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
+		9A35D077240ECE1C006BBA6A /* Players.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Players.swift; sourceTree = "<group>"; };
+		9A35D07B240EE3A0006BBA6A /* PlayerViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewCell.swift; sourceTree = "<group>"; };
+		9A35D07D240EF8CE006BBA6A /* NewUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserViewController.swift; sourceTree = "<group>"; };
+		9A35D07F240F001B006BBA6A /* Teams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Teams.swift; sourceTree = "<group>"; };
+		9A35D081240F01E2006BBA6A /* DetailPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPlayerViewController.swift; sourceTree = "<group>"; };
 		EFB499CD7854C7FA94A1D048 /* Pods-PruebaBallDontLieTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PruebaBallDontLieTests.debug.xcconfig"; path = "Target Support Files/Pods-PruebaBallDontLieTests/Pods-PruebaBallDontLieTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EFD561431F118A316335C890 /* Pods_PruebaBallDontLieTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PruebaBallDontLieTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE5D8E9B3D858F400F54DE29 /* Pods-PruebaBallDontLieTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PruebaBallDontLieTests.release.xcconfig"; path = "Target Support Files/Pods-PruebaBallDontLieTests/Pods-PruebaBallDontLieTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -101,7 +113,6 @@
 				EFB499CD7854C7FA94A1D048 /* Pods-PruebaBallDontLieTests.debug.xcconfig */,
 				FE5D8E9B3D858F400F54DE29 /* Pods-PruebaBallDontLieTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -130,9 +141,11 @@
 		9A35D040240EB9F0006BBA6A /* PruebaBallDontLie */ = {
 			isa = PBXGroup;
 			children = (
+				9A35D074240ECD69006BBA6A /* Models */,
+				9A35D073240ECD55006BBA6A /* Controllers */,
+				9A35D072240ECD4A006BBA6A /* Services */,
 				9A35D041240EB9F0006BBA6A /* AppDelegate.swift */,
 				9A35D043240EB9F0006BBA6A /* SceneDelegate.swift */,
-				9A35D045240EB9F0006BBA6A /* ViewController.swift */,
 				9A35D047240EB9F0006BBA6A /* Main.storyboard */,
 				9A35D04A240EB9F5006BBA6A /* Assets.xcassets */,
 				9A35D04C240EB9F5006BBA6A /* LaunchScreen.storyboard */,
@@ -159,6 +172,34 @@
 			path = PruebaBallDontLieUITests;
 			sourceTree = "<group>";
 		};
+		9A35D072240ECD4A006BBA6A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				9A35D075240ECDC8006BBA6A /* Services.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		9A35D073240ECD55006BBA6A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9A35D045240EB9F0006BBA6A /* ViewController.swift */,
+				9A35D07B240EE3A0006BBA6A /* PlayerViewCell.swift */,
+				9A35D07D240EF8CE006BBA6A /* NewUserViewController.swift */,
+				9A35D081240F01E2006BBA6A /* DetailPlayerViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		9A35D074240ECD69006BBA6A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9A35D077240ECE1C006BBA6A /* Players.swift */,
+				9A35D07F240F001B006BBA6A /* Teams.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		A5EB297C58779CA20F34535A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -180,6 +221,7 @@
 				9A35D03A240EB9F0006BBA6A /* Sources */,
 				9A35D03B240EB9F0006BBA6A /* Frameworks */,
 				9A35D03C240EB9F0006BBA6A /* Resources */,
+				5C312C9997391FA02429C043 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -217,6 +259,7 @@
 				9A35D05B240EB9F5006BBA6A /* Sources */,
 				9A35D05C240EB9F5006BBA6A /* Frameworks */,
 				9A35D05D240EB9F5006BBA6A /* Resources */,
+				99A49DC1AF9083D67122DBF6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -343,6 +386,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		5C312C9997391FA02429C043 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PruebaBallDontLie/Pods-PruebaBallDontLie-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PruebaBallDontLie/Pods-PruebaBallDontLie-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PruebaBallDontLie/Pods-PruebaBallDontLie-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		8F930A891BE4E6F6BA830BB6 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -365,6 +425,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		99A49DC1AF9083D67122DBF6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PruebaBallDontLie-PruebaBallDontLieUITests/Pods-PruebaBallDontLie-PruebaBallDontLieUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PruebaBallDontLie-PruebaBallDontLieUITests/Pods-PruebaBallDontLie-PruebaBallDontLieUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PruebaBallDontLie-PruebaBallDontLieUITests/Pods-PruebaBallDontLie-PruebaBallDontLieUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -372,9 +449,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A35D080240F001B006BBA6A /* Teams.swift in Sources */,
 				9A35D046240EB9F0006BBA6A /* ViewController.swift in Sources */,
+				9A35D082240F01E2006BBA6A /* DetailPlayerViewController.swift in Sources */,
+				9A35D07C240EE3A0006BBA6A /* PlayerViewCell.swift in Sources */,
+				9A35D078240ECE1C006BBA6A /* Players.swift in Sources */,
+				9A35D076240ECDC8006BBA6A /* Services.swift in Sources */,
 				9A35D042240EB9F0006BBA6A /* AppDelegate.swift in Sources */,
 				9A35D044240EB9F0006BBA6A /* SceneDelegate.swift in Sources */,
+				9A35D07E240EF8CE006BBA6A /* NewUserViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
